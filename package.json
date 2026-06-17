@@ -6,9 +6,12 @@
   "scripts": {
     "dev": "vite",
     "build": "tsc -b && vite build",
-    "lint": "eslint .",
+    "lint": "eslint src --ext ts,tsx",
+    "format": "prettier --write src",
     "preview": "vite preview",
-    "prepare": "husky"
+    "prepare": "husky",
+    "type-check": "tsc -b --noEmit",
+    "test": "vitest"
   },
   "dependencies": {
     "@reduxjs/toolkit": "^2.12.0",
