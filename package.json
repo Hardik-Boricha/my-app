@@ -4,11 +4,14 @@
   "version": "0.0.0",
   "type": "module",
   "scripts": {
-    "dev": "vite",
-    "build": "tsc -b && vite build",
-    "lint": "eslint .",
+    "dev": "node api.js && vite",
+    "build": "node api.js && tsc -b && vite build",
+    "lint": "eslint src --ext ts,tsx",
+    "format": "prettier --write src",
     "preview": "vite preview",
-    "prepare": "husky"
+    "prepare": "husky",
+    "type-check": "tsc -b --noEmit",
+    "test": "vitest"
   },
   "dependencies": {
     "@reduxjs/toolkit": "^2.12.0",
